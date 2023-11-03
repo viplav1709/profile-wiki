@@ -1,0 +1,29 @@
+{
+  "name": "profile-wiki-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/profile-wiki-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/profile-wiki-e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "profile-wiki:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "profile-wiki:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/profile-wiki-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["profile-wiki"]
+}
