@@ -2,7 +2,9 @@
   "name": "@handson/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "npx nx run profile-wiki:serve"
+  },
   "private": true,
   "dependencies": {
     "@nx/next": "17.0.2",
