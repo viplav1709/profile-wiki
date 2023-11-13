@@ -1,2 +1,43 @@
-.page {
-}
+.custom_footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .character_detail {
+    width: 80%;
+    margin: 0px 0px 20px 0px;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgb(203, 190, 190);
+  }
+  
+  .left {
+    width: 40%;
+  }
+  .left > img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+  }
+  .right {
+    width: 60%;
+    background-color: rgb(219, 255, 255);
+  }
+  .right > ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: 5px;
+      list-style-type: none;
+  }
+  
+  .right > ul li {
+      font-size: 18px;
+  }
